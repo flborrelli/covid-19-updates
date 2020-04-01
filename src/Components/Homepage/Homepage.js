@@ -39,15 +39,26 @@ function Homepage() {
   return (
     <div className="home-container">
       <h1>COVID-19 CoronaVirus Pandemic Update</h1>
-      
-      <h3>TOTAL CASES</h3>
-      <div>{total}</div>
 
-      <h3>DEATHS</h3>
-      <div>{deaths}</div>
+      <div>
 
-      <h3>RECOVERED</h3>
-      <div>{recovered}</div>
+        <div>
+          <h3>TOTAL CASES</h3>
+          <div>{total}</div>
+        </div>
+        
+        <div>
+          <h3>DEATHS</h3>
+          <div>{deaths}</div>
+        </div>
+
+        <div>
+          <h3>RECOVERED</h3>
+          <div>{recovered}</div>
+        </div>
+
+
+      </div>
 
     </div>
     
