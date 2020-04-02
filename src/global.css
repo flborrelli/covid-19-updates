@@ -14,5 +14,10 @@ html {
 body {
   font: 400 14px Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  
+  background-color: rgb(248, 246, 246);
+  /* background: url(assets/virus-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
 }
