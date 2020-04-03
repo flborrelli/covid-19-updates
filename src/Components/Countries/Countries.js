@@ -37,7 +37,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
     <div className="country-container">
       <h2>
         <span role="img" aria-label="world">
-          🌎
+        📍
         </span>{" "}
         By Country
       </h2>
