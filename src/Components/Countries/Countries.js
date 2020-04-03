@@ -94,7 +94,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
           </h4>
           <span style={{ backgroundColor: "green" }}>
             {" "}
-            {(isNaN(recoveryCountryRate)) ? '0%' : recoveryCountryRate} RECOVERY RATE
+            {(loading) ? '0%' : recoveryCountryRate} RECOVERY RATE
           </span>
         </div>
 
@@ -123,7 +123,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
           <span style={{ backgroundColor: "#d63447" }}>
             {" "}
             {
-              (isNaN(deathCountryRate)) ? '0%' : deathCountryRate
+              (loading) ? '0%' : deathCountryRate
               } FATALITY RATE
           </span>
         </div>
