@@ -63,7 +63,12 @@
 
 }
 
-.dropdown {
+.dropdown-box {
   width: 30vw !important;
+  font-size: 1.8rem !important;
   margin: 0 !important;
+}
+
+.text {
+  font-size: 1.8rem;
 }

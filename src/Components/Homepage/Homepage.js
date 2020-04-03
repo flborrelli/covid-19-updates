@@ -3,6 +3,7 @@ import './homepage.css';
 import api from '../../services/api';
 import axios from 'axios';
 import { Dropdown } from 'semantic-ui-react';
+import countriesNewData from '../../utils/countries';
 
 function Homepage() {
 
@@ -23,6 +24,7 @@ function Homepage() {
 
   const recoveryCountryRate = Math.round(countryRecovered / countryTotal * 100) + '%';
   const deathCountryRate = Math.round(countryDeaths / countryTotal * 100) + '%';
+  const totalCountryRate = (countryTotal / total * 100).toFixed(3) + '%';
 
   useEffect(() => {
     apiAccess();
@@ -57,13 +59,6 @@ function Homepage() {
       const response = await axios.get('https://covid19.mathdro.id/api/countries');
       const { countries } = response.data;
       setCountriesInfo(countries);
-      // await countries.map( (e) => ({
-      //   ...e,
-      //   iso2: e.iso2.toLowerCase()
-      // }));
-      // console.log(countriesArray)
-      // console.log(response.data.countries[0].iso2.toLowerCase())
-
     } catch(err) {
       console.log('Error while getting countries', err);
     }
@@ -81,6 +76,7 @@ function Homepage() {
       console.log('Error while accessing API Data:', err)
     }
   }
+
 
 
   return (
@@ -119,17 +115,19 @@ function Homepage() {
 
       </div>
 
-      
+      <div className='dropdown-container'>
+
       <Dropdown
-    className='hello'
+    className='dropdown-box'
     placeholder='Select Country'
     onChange={handleChange}
-    fluid
     search
+    fluid
     selection
     button={true}
-    options={countriesInfo.map( (country) => ( {key: country.iso2, value: country.name, text: country.name }))}
+    options={countriesNewData.map( (country) => ( {key: country.iso2, value: country.name, flag: country.iso2, text: country.name }))}
   />
+      </div>
 
       <div>
 
@@ -138,6 +136,8 @@ function Homepage() {
           <h4 style={{color: '#f3c623'}}>{parseInt(countryTotal).toFixed()
                   .replace(",")
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h4>
+          <span style={{backgroundColor: '#f3c623'}}> {totalCountryRate} OF GLOBAL RATE</span>
+
         </div>
         
 
