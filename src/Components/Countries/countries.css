@@ -1,0 +1,48 @@
+.country-container {
+  margin-top: 5vh;
+}
+
+.country-container h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #4d4c7d;
+  margin-top: 5vh;
+}
+
+.country-container > div {
+  display: flex; 
+  justify-content: center;
+  margin-top: 4vh;
+  margin-bottom: 10vh;
+}
+
+.country-container > div > div {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country-container > div > div + div {
+  margin-left: 15vw;
+}
+
+.country-container > div > div > h3 {
+  margin-bottom: 2vh;
+  font-size: 2rem;
+  color: #636372;
+  font-weight: 300;
+}
+
+.country-container > div > div > h4 {
+  font-size: 4rem;
+}
+
+.country-container > div > div > span {
+  margin-top: 1vh;
+  padding: 5px;
+  font-size: 2rem;
+  color: ghostwhite;
+  font-weight: 400;
+
+}
