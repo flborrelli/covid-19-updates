@@ -14,3 +14,33 @@
   color: #4d4c7d;
   font-weight: 400;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+@media (max-width: 900px) {
+  
+  .home-container {
+    margin-top: 3vh;
+    background-color: rgba(172, 219, 219, 0.9);
+  }
+  
+  .home-container h1 {
+    font-size: 3rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .home-container p {
+    text-align: center;
+    font-size: 2rem;
+    margin-left: 2vw;
+    color: #4d4c7d;
+    font-weight: 300;
+  }
+  
+}

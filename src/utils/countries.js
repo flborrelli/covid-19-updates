@@ -440,7 +440,6 @@ const countriesData = [
   },
   {
     name: "Kosovo",
-    iso2: "XK",
     iso3: "XKX"
   },
   {

@@ -12,3 +12,20 @@
 .text {
   font-size: 1.8rem;
 }
+
+@media (max-width: 900px) {
+  
+  .dropdown-container {
+    align-items: center;
+  }
+  
+  .dropdown-box {
+    width: 80vw !important;
+    font-size: 1.8rem !important;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+  }
+  
+}

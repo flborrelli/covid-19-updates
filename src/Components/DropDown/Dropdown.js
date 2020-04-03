@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './dropdown.css';
 import { Dropdown } from 'semantic-ui-react';
 import countriesNewData from '../../utils/countries';
 
 function DropdownBox({ countrySelectApi }) {
-  const [inputValue, setInputValue] = useState('');
 
   const handleChange = (e, result) => {
     e.preventDefault();
     const { value } = result || e.target;
-    setInputValue(value);
     countrySelectApi(value)
   }
 

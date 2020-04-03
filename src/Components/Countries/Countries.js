@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import "./countries.css";
 import axios from 'axios';
 import DropdownBox from '../DropDown/Dropdown';
+import Loader from 'react-loader-spinner';
+
 
 function Countries({ total }) {
 
   const [countryTotal, setCountryTotal] = useState('');
   const [countryRecovered, setCountryRecovered] = useState('');
   const [countryDeaths, setCountryDeaths] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const recoveryCountryRate =
   Math.round((countryRecovered / countryTotal) * 100) + "%";
@@ -24,6 +27,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
       setCountryTotal(data.confirmed.value);
       setCountryRecovered(data.recovered.value);
       setCountryDeaths(data.deaths.value);
+      setLoading(false);
     } catch(err){
       console.log('Error while accessing a specific country', err)
     }
@@ -47,10 +51,18 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             TOTAL CASES
           </h3>
           <h4 style={{ color: "#f3c623" }}>
-            {parseInt(countryTotal)
+            {
+              (loading) ? <Loader type="ThreeDots"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         /> :
+              (countryTotal) ? parseInt(countryTotal)
               .toFixed()
               .replace(",")
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
+            }
+            
           </h4>
           <span style={{ backgroundColor: "#f3c623" }}>
             {" "}
@@ -67,14 +79,22 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             RECOVERED
           </h3>
           <h4 style={{ color: "green" }}>
-            {parseInt(countryRecovered)
+            { 
+              (loading) ? <Loader type="ThreeDots"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         /> :
+              (countryTotal) ?
+              parseInt(countryRecovered)
               .toFixed()
               .replace(",")
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
+              }
           </h4>
           <span style={{ backgroundColor: "green" }}>
             {" "}
-            {recoveryCountryRate} RECOVERY RATE
+            {(isNaN(recoveryCountryRate)) ? '0%' : recoveryCountryRate} RECOVERY RATE
           </span>
         </div>
 
@@ -86,14 +106,25 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             DEATHS
           </h3>
           <h4 style={{ color: "#d63447" }}>
-            {parseInt(countryDeaths)
+            { 
+              (loading) ? <Loader type="ThreeDots"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         /> :
+              (countryTotal) ?
+            parseInt(countryDeaths)
               .toFixed()
               .replace(",")
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",") :
+              0
+              }
           </h4>
           <span style={{ backgroundColor: "#d63447" }}>
             {" "}
-            {deathCountryRate} FATALITY RATE
+            {
+              (isNaN(deathCountryRate)) ? '0%' : deathCountryRate
+              } FATALITY RATE
           </span>
         </div>
       </div>

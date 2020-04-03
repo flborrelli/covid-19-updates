@@ -7,9 +7,6 @@ function World({ total, recovered, deaths }) {
   const recoveryRate = Math.round(recovered / total * 100) + '%';
   const deathRate = Math.round(deaths / total * 100) + '%';
 
-  console.log(total, recovered, deaths)
-  
-
   return (
     <div className="world-container">
       <h2>

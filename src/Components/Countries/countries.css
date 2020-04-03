@@ -46,3 +46,49 @@
   font-weight: 400;
 
 }
+
+@media (max-width: 900px) {
+  
+  .country-container {
+    margin-top: 5vh;
+  }
+  
+  .country-container h2 {
+    font-size: 3rem;
+    margin-bottom: 6vh;
+  }
+  
+  .country-container > div {
+    display: flex; 
+    flex-direction: column;
+  }
+  
+  .country-container > div > div {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .country-container > div > div + div {
+    margin-left: 0;
+    margin-top: 6vh;
+  }
+  
+  .country-container > div > div > h3 {
+    text-decoration: underline;
+    margin-bottom: 2vh;
+    font-size: 1.5rem;
+  }
+  
+  
+  .country-container > div > div > h4 {
+    font-size: 3.5rem;
+  }
+  
+  .world-container > div > div > span {
+    font-size: 1.5rem;
+
+  
+  }
+}
