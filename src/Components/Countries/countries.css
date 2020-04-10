@@ -84,9 +84,10 @@
   
   .country-container > div > div > h4 {
     font-size: 3.5rem;
+    margin: 0;
   }
   
-  .world-container > div > div > span {
+  .country-container > div > div > span {
     font-size: 1.5rem;
 
   

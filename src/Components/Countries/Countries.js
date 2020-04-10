@@ -13,10 +13,10 @@ function Countries({ total }) {
   const [loading, setLoading] = useState(true);
 
   const recoveryCountryRate =
-  Math.round((countryRecovered / countryTotal) * 100) + "%";
+  Math.round((countryRecovered / countryTotal) * 100).toFixed(1) + "%";
 
 const deathCountryRate =
-  Math.round((countryDeaths / countryTotal) * 100) + "%";
+  Math.round((countryDeaths / countryTotal) * 100).toFixed(1) + "%";
 
 const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
 
