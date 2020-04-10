@@ -46,8 +46,7 @@ function Homepage() {
       <>
       <div className="home-container">
     <h1>
-      {" "}
-      COVID-19{" "}
+      COVID-19
       <span role="img" aria-label="virus">
         🦠
       </span>
