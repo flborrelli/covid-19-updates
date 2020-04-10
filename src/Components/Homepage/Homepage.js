@@ -4,6 +4,7 @@ import Countries from '../Countries/Countries';
 import World from "../World/World";
 import api from "../../services/api";
 import Loader from 'react-loader-spinner';
+import Footer from '../Footer/Footer'
 
 function Homepage() {
 
@@ -51,13 +52,14 @@ function Homepage() {
       COVID-19
       <p>Live Updates</p>
     </h1>
-    <span role="img" aria-label="virus" class='virus'>
+    <span role="img" aria-label="virus" className='virus'>
         🦠
       </span>
       </div>
   </div>
     <World total={total} recovered={recovered} deaths={deaths} />
     <Countries total={total} />
+    <Footer/>
     </>
     } 
     </> 

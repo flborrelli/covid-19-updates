@@ -3,7 +3,7 @@
 }
 
 .country-container h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   color: #4d4c7d;
   margin-top: 5vh;
@@ -12,8 +12,8 @@
 .country-container > div {
   display: flex; 
   justify-content: center;
-  margin-top: 4vh;
-  margin-bottom: 10vh;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
 }
 
 .country-container > div > div {
@@ -58,7 +58,7 @@
   
   .country-container h2 {
     font-size: 3rem;
-    margin-bottom: 6vh;
+    margin-bottom: 3vh;
   }
   
   .country-container > div {
@@ -71,11 +71,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 4vw 4vw 0 2vw;
+
   }
   
   .country-container > div > div + div {
-    margin-left: 0;
     margin-top: 6vh;
+    margin: 4vw 4vw 0 2vw;
   }
   
   .country-container > div > div > h3 {

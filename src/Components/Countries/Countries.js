@@ -50,7 +50,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             </span>{" "}
             TOTAL CASES
           </h3>
-          <h4 style={{ color: "#f3c623" }}>
+          <h4 style={{ color: "#f77426" }}>
             {
               (loading) ? <Loader type="ThreeDots"
          color="#032444"
@@ -64,7 +64,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             }
             
           </h4>
-          <span style={{ backgroundColor: "#f3c623" }}>
+          <span style={{ backgroundColor: "#f77426" }}>
             {" "}
             {totalCountryRate} OF GLOBAL RATE
           </span>
@@ -75,7 +75,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             {" "}
             <span role="img" aria-label="happy-face">
               😃
-            </span>
+            </span>{" "}
             RECOVERED
           </h3>
           <h4 style={{ color: "#89ca5b" }}>
@@ -102,7 +102,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
           <h3>
             <span role="img" aria-label="crying-face">
               😢
-            </span>
+            </span>{" "}
             DEATHS
           </h3>
           <h4 style={{ color: "#d63447" }}>

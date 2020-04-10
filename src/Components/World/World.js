@@ -11,7 +11,7 @@ function World({ total, recovered, deaths }) {
     <div className="world-container">
       <h2>
         <span role="img" aria-label="world">
-          🌎
+          🌎 
         </span>{" "}
         Global
       </h2>
@@ -24,20 +24,22 @@ function World({ total, recovered, deaths }) {
             </span>{" "}
             TOTAL CASES
           </h3>
-          <h4 style={{ color: "#f3c623" }}>
+          <h4 style={{ color: "#f77426" }}>
             {parseInt(total)
               .toFixed()
               .replace(",")
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </h4>
+          <span style={{ backgroundColor: "#f77426" }}>
+            Since November 17th, 2019
+          </span>
         </div>
 
         <div>
           <h3>
-            {" "}
             <span role="img" aria-label="smiley">
               😃
-            </span>
+            </span>{" "}
             RECOVERED
           </h3>
           <h4 style={{ color: "#89ca5b" }}>
@@ -47,7 +49,6 @@ function World({ total, recovered, deaths }) {
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </h4>
           <span style={{ backgroundColor: "#89ca5b" }}>
-            {" "}
             {recoveryRate} RECOVERY RATE
           </span>
         </div>
@@ -56,7 +57,7 @@ function World({ total, recovered, deaths }) {
           <h3>
             <span role="img" aria-label="crying-face">
               😢
-            </span>
+            </span>{" "}
             DEATHS
           </h3>
           <h4 style={{ color: "#d63447" }}>
