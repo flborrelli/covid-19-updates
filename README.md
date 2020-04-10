@@ -4,6 +4,8 @@
 
 This is a **mobile friendly :iphone: single-page Web application** developed with React :computer:.  
 
+The App shows COVID-19 global and country-by-country data, such as total cases, recovery and deaths by Coronavirus.
+
 #### API Documentation: https://github.com/mathdroid/covid-19-api
 
 #### Demo: https://covid-19-update.netlify.com
