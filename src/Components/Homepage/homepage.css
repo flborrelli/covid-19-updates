@@ -1,23 +1,37 @@
+
+
 .home-container {
-  margin-top: 1vh;
-  box-shadow: 0px 9px 5px -6px rgba(0,0,0,0.75);
+  background-color: #95b7d871;
+  box-shadow: 0px 6px 5px -6px rgba(0,0,0,0.75);
+}
+
+.home-container > div {
+  margin-left: 3vw;
+  display: flex;
+  align-items: center;
 }
 
 .home-container img {
-  width: 70px;
+  width: 90px;
 }
 
 .home-container h1 {
-  font-size: 4rem;
+
+  font-size: 3rem;
   margin-left: 2vw;
-  color: #4d4c7d;
+  color: #032444;
+  text-align: center;
 }
 
 .home-container p {
-  font-size: 3rem;
-  margin-left: 2vw;
-  color: #4d4c7d;
+  font-size: 1.6rem;
+  color: #032444;
   font-weight: 400;
+}
+
+.virus {
+  font-size: 70px;
+  margin-left: 1vw;
 }
 
 .loader {
@@ -45,7 +59,7 @@
     text-align: center;
     font-size: 2rem;
     margin-left: 2vw;
-    color: #4d4c7d;
+    color: #032444;
     font-weight: 300;
   }
   

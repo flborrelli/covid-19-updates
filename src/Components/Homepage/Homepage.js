@@ -36,7 +36,7 @@ function Homepage() {
       <div className="loader">
       <Loader
       type="Grid"
-       color="#00BFFF"
+       color="#032444"
        height={300}
        width={300}
        
@@ -45,13 +45,16 @@ function Homepage() {
       : 
       <>
       <div className="home-container">
+      <div>
+    <img src="/android-chrome-192x192.png" alt="virus"/>
     <h1>
       COVID-19
-      <span role="img" aria-label="virus">
+      <p>Live Updates</p>
+    </h1>
+    <span role="img" aria-label="virus" class='virus'>
         🦠
       </span>
-    </h1>
-    <p>Live Updates</p>
+      </div>
   </div>
     <World total={total} recovered={recovered} deaths={deaths} />
     <Countries total={total} />

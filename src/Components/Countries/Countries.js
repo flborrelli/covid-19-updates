@@ -53,7 +53,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
           <h4 style={{ color: "#f3c623" }}>
             {
               (loading) ? <Loader type="ThreeDots"
-         color="#00BFFF"
+         color="#032444"
          height={100}
          width={100}
          /> :
@@ -78,10 +78,10 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
             </span>
             RECOVERED
           </h3>
-          <h4 style={{ color: "green" }}>
+          <h4 style={{ color: "#89ca5b" }}>
             { 
               (loading) ? <Loader type="ThreeDots"
-         color="#00BFFF"
+         color="#032444"
          height={100}
          width={100}
          /> :
@@ -92,7 +92,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
               }
           </h4>
-          <span style={{ backgroundColor: "green" }}>
+          <span style={{ backgroundColor: "#89ca5b" }}>
             {" "}
             {(loading) ? '0%' : recoveryCountryRate} RECOVERY RATE
           </span>
@@ -108,7 +108,7 @@ const totalCountryRate = ((countryTotal / total) * 100).toFixed(3) + "%";
           <h4 style={{ color: "#d63447" }}>
             { 
               (loading) ? <Loader type="ThreeDots"
-         color="#00BFFF"
+         color="#032444"
          height={100}
          width={100}
          /> :

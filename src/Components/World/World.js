@@ -40,13 +40,13 @@ function World({ total, recovered, deaths }) {
             </span>
             RECOVERED
           </h3>
-          <h4 style={{ color: "green" }}>
+          <h4 style={{ color: "#89ca5b" }}>
             {parseInt(recovered)
               .toFixed()
               .replace(",")
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </h4>
-          <span style={{ backgroundColor: "green" }}>
+          <span style={{ backgroundColor: "#89ca5b" }}>
             {" "}
             {recoveryRate} RECOVERY RATE
           </span>
